@@ -568,7 +568,7 @@ function PageHeading({number, title, subtitle}) {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/Portfolio">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
