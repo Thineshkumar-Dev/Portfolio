@@ -5,11 +5,6 @@
 **/dist/
 **/build/
 
-# Environment
-**/.env
-**/.env.*
-!**/.env.example
-
 # Vite
 **/.vite/
 
