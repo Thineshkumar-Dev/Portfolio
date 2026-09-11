@@ -11,6 +11,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -36,14 +40,14 @@ jobs:
 
       - name: Build frontend
         working-directory: frontend
-        run: npm run build
         env:
           VITE_API_BASE_URL: https://portfolio-1-0hzc.onrender.com
+        run: npm run build
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload frontend
+      - name: Upload frontend artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: frontend/dist
