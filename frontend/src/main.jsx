@@ -195,7 +195,7 @@ function Layout() {
               {label}
             </NavLink>
           ))}
-          <a className="resume-nav" href="/resume.pdf" download>
+          <a className="resume-nav"   href={`${import.meta.env.BASE_URL}resume.pdf`} download>
             Resume <Download size={14}/>
           </a>
         </nav>
@@ -262,7 +262,7 @@ function Home() {
           <button className="button dark" onClick={() => navigate("/projects")}>
             View My Work <ArrowRight size={17}/>
           </button>
-          <a className="button light" href="/resume.pdf" download>
+          <a className="button light"   href={`${import.meta.env.BASE_URL}resume.pdf`} download>
             Download Resume <Download size={17}/>
           </a>
         </div>
@@ -517,7 +517,7 @@ function Contact() {
             <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={18}/> LinkedIn</a>
           </div>
 
-          <a className="resume-card" href="/resume.pdf" download>
+          <a className="resume-card"   href={`${import.meta.env.BASE_URL}resume.pdf`} download>
             <Download size={20}/>
             <span><b>Download My Resume</b><small>Get a copy of my latest resume.</small></span>
             <ArrowUpRight size={18}/>
